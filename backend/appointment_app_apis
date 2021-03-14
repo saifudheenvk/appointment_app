@@ -1,0 +1,43 @@
+APIs For the App
+
+base_url = http://localhost:3001
+authkey = jgdghvgshdjhgsdjhgjhsgdc
+
+USER
+
+1. Signup 
+
+  url:base_url/users/create
+  request type: POST
+  body :{password,name,email,userType,*authkey(for admin)
+
+2. get single user 
+
+  url:base_url/users/Id
+  request type: GET
+
+AUTHENTICATION
+
+1.Login
+
+  url:base_url/auth/login
+  request type: POST
+  body :{password,email}
+
+APPOINTMENTS
+
+1.Get Todays(Admin)
+
+  url:base_url/appointments/:date
+  request type: GET
+
+2.Get My bookings(User)
+
+  url:base_url/appointments/:userId
+  request type: GET
+
+3.Add new bookings(User)
+
+  url:base_url/appointments
+  request type: POST
+  body: {date(intimestap),userId}
